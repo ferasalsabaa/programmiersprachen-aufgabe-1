@@ -1,7 +1,7 @@
 #define CATCH_CONFIG_RUNNER
 #include <catch.hpp>
 #include<cmath>
-
+//1.8
 int gcd (int a,int b)
 {
   int r=a%b;
@@ -17,7 +17,7 @@ TEST_CASE("describe_gcd", "[gcd]"){
   REQUIRE(gcd(9,6) == 3);
   REQUIRE(gcd(3,7) == 1);
 }
-
+//1.3
 void kleinestezahlfinden (){
     int zahl = 1; /* die Zahl, die wir probieren wollen */
     bool test=false; /* boolean feur ueperrbreufen ob die Zahl gefunden wird oder noch nicht */
@@ -81,18 +81,26 @@ TEST_CASE("fract", "[fract]"){
 }
 //1.12
 
-void Zylinders (int radius , int hoehe){
-  int volum = M_PI *radius*radius*hoehe ;
-  int oeberflaeche = (2*M_PI*radius*radius) + 2 * M_PI *radius * hoehe ;
+float Zylinders_volum (float radius , float hoehe){
+    return M_PI *radius*radius*hoehe ;
+ 
+}
+TEST_CASE("finden_Zylinders_volum", "[Zylinders_volum]"){ 
+  REQUIRE(Zylinders_volum(4 , 4) == Approx(201.062).epsilon(0.001));
+  REQUIRE(Zylinders_volum(6, 7) == Approx(791.681).epsilon(0.001));
+ 
 }
 
-/* TEST_CASE("finden_Zylinders", "[Zylinders]"){ //????????????????????????????
-  REQUIRE(Zylinders(214 , 77) == Approx(0.77));
-  REQUIRE(fract(0.3) == Approx(0.3));
-  REQUIRE(fract(-99.3) == Approx(-0.3));
-  REQUIRE(fract(M_PI) == Approx(0.14).epsilon(0.01));
+float Zylinders_oeberflaeche(float radius , float hoehe){
+     return (2*M_PI*radius*radius) + 2 * M_PI *radius * hoehe ;
 }
-*/
+TEST_CASE("finden_Zylinders_oeberflaeche", "[Zylinders_oeberflaeche]"){ 
+  REQUIRE(Zylinders_oeberflaeche(4 , 4) == Approx(201.062).epsilon(0.001));
+  REQUIRE(Zylinders_oeberflaeche(6, 7) == Approx(490.088).epsilon(0.001));
+ 
+}
+
+
 //1.13
 int factorial (int nummer){
     if(nummer <= 1){
@@ -123,7 +131,13 @@ TEST_CASE("finden_factorial", "[factorial]"){
   //1.15
   bool is_prime (int nummer){
     bool richtig = true ;
-    
+    if (nummer == 2){
+      return true ;
+    }
+    else if (nummer <2){
+      std :: cout << "die Zahl muss groeser als 2 sein!!" ;
+    }
+    else {
         for(int i=2;i<nummer;i++){
           if(nummer%i ==0){
             richtig =false;
@@ -133,6 +147,7 @@ TEST_CASE("finden_factorial", "[factorial]"){
         if(richtig == true){
           return true;
         }
+    }
     }
   TEST_CASE("finden_is_prime", "[is_prime]"){
   REQUIRE(is_prime(4) == false);
