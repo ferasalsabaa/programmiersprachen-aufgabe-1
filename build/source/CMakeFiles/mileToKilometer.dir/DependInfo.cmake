@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/feras/programmiersprachen-aufgabe-1/source/tests.cpp" "/home/feras/programmiersprachen-aufgabe-1/build/source/CMakeFiles/tests.dir/tests.cpp.o"
+  "/home/feras/programmiersprachen-aufgabe-1/source/mileToKilometer.cpp" "/home/feras/programmiersprachen-aufgabe-1/build/source/CMakeFiles/mileToKilometer.dir/mileToKilometer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/feras/programmiersprachen-helloworld/source/helloworld.cpp" "/home/feras/programmiersprachen-helloworld/build/source/CMakeFiles/helloworld.dir/helloworld.cpp.o"
+  "/home/feras/programmiersprachen-aufgabe-1/source/helloworld.cpp" "/home/feras/programmiersprachen-aufgabe-1/build/source/CMakeFiles/helloworld.dir/helloworld.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

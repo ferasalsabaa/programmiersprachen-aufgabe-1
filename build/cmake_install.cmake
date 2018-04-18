@@ -1,4 +1,4 @@
-# Install script for directory: /home/feras/programmiersprachen-helloworld
+# Install script for directory: /home/feras/programmiersprachen-aufgabe-1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/feras/programmiersprachen-helloworld/build/source/cmake_install.cmake")
+  include("/home/feras/programmiersprachen-aufgabe-1/build/source/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/feras/programmiersprachen-helloworld/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/feras/programmiersprachen-aufgabe-1/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

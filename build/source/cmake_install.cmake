@@ -1,4 +1,4 @@
-# Install script for directory: /home/feras/programmiersprachen-helloworld/source
+# Install script for directory: /home/feras/programmiersprachen-aufgabe-1/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

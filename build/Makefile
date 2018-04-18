@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/feras/programmiersprachen-helloworld
+CMAKE_SOURCE_DIR = /home/feras/programmiersprachen-aufgabe-1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/feras/programmiersprachen-helloworld/build
+CMAKE_BINARY_DIR = /home/feras/programmiersprachen-aufgabe-1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/feras/programmiersprachen-helloworld/build/CMakeFiles /home/feras/programmiersprachen-helloworld/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/feras/programmiersprachen-aufgabe-1/build/CMakeFiles /home/feras/programmiersprachen-aufgabe-1/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/feras/programmiersprachen-helloworld/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/feras/programmiersprachen-aufgabe-1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named tests
-
-# Build rule for target.
-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tests
-.PHONY : tests
-
-# fast build rule for target.
-tests/fast:
-	$(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/build
-.PHONY : tests/fast
-
-#=============================================================================
 # Target rules for targets named helloworld
 
 # Build rule for target.
@@ -136,6 +123,32 @@ helloworld/fast:
 	$(MAKE) -f source/CMakeFiles/helloworld.dir/build.make source/CMakeFiles/helloworld.dir/build
 .PHONY : helloworld/fast
 
+#=============================================================================
+# Target rules for targets named mileToKilometer
+
+# Build rule for target.
+mileToKilometer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mileToKilometer
+.PHONY : mileToKilometer
+
+# fast build rule for target.
+mileToKilometer/fast:
+	$(MAKE) -f source/CMakeFiles/mileToKilometer.dir/build.make source/CMakeFiles/mileToKilometer.dir/build
+.PHONY : mileToKilometer/fast
+
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -144,8 +157,9 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... tests"
 	@echo "... helloworld"
+	@echo "... mileToKilometer"
+	@echo "... tests"
 .PHONY : help
 
 
