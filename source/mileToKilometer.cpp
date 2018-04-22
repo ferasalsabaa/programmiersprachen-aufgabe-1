@@ -2,7 +2,9 @@
 #include <catch.hpp>
 #include<cmath>
 double mileToKilo (double m){
-      return 1.6 * m ; 
+  double a=0;
+       a =1.6 * m ; 
+       return a;
 }
 
 

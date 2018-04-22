@@ -1,22 +1,7 @@
 #define CATCH_CONFIG_RUNNER
 #include <catch.hpp>
 #include<cmath>
-//1.8
-int gcd (int a,int b)
-{
-  int r=a%b;
-  if (r==0){
-    return b;
-  }
-  else{
-    return gcd(b,r);
-  }
-}
-TEST_CASE("describe_gcd", "[gcd]"){
-  REQUIRE(gcd(2,4) == 2);
-  REQUIRE(gcd(9,6) == 3);
-  REQUIRE(gcd(3,7) == 1);
-}
+
 //1.3
 void kleinestezahlfinden (){
     int zahl = 1; /* die Zahl, die wir probieren wollen */
@@ -39,7 +24,23 @@ void kleinestezahlfinden (){
 
     }
 }
-
+//1.8
+int gcd (int a,int b)
+{
+  int r=a%b;
+  if (r==0){
+    return b;
+  }
+  else{
+    return gcd(b,r);
+  }
+}
+TEST_CASE("describe_gcd", "[gcd]"){
+  REQUIRE(gcd(2,4) == 2);
+  REQUIRE(gcd(9,6) == 3);
+  REQUIRE(gcd(3,7) == 1);
+}
+//1.9
 int querSumme(int zahl){
       int a=0;
       while(zahl!=0){
@@ -54,6 +55,7 @@ int querSumme(int zahl){
   REQUIRE(querSumme(0) == 0);
   REQUIRE(querSumme(1) == 1);
 }
+//1.10
 void sumMultiples(){
   int summe = 0;
   for(int i=0;i<=1000;i++){
@@ -64,7 +66,7 @@ void sumMultiples(){
   }
   std:: cout<< "die summe von 1 bis 1000 ist"<<summe <<".\n";
 }
-
+//1.11
 double fract(double nummer){
   double a = 0;
   int zahl = int (nummer);
@@ -154,7 +156,7 @@ TEST_CASE("finden_factorial", "[factorial]"){
   REQUIRE(is_prime(561) == false);
   REQUIRE(is_prime(11) == true);
   }
-int main(int argc, char* argv[])
+int main (int argc, char* argv[])
 {
    
     
