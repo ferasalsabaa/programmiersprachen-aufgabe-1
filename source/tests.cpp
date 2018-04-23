@@ -45,7 +45,7 @@ int querSumme(int zahl){
       int a=0;
       while(zahl!=0){
         a=a+(zahl%10);
-        zahl=zahl/10;
+        zahl=zahl/10; //abrunden
       }
         return a;
       }

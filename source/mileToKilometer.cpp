@@ -21,8 +21,8 @@ TEST_CASE("mileToKilo", "[mileToKilo]"){
 int main(int argc, char* argv[])
 {
   double mile;
-  std:: cout <<"****";
+  std:: cout <<"Geben Sie bitte die Anzahl der Meilen ein";
   std :: cin >> mile;
-  std:: cout <<"you have"<<mileToKilo(mile)<<"mieter";
+  std:: cout <<"Sie haben "<<mileToKilo(mile)<<"Meter";
   return Catch::Session().run(argc, argv);
 }
